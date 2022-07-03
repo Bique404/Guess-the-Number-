@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%; /* 16px*0.625 = 10px */
+}
+body {
+  background-color: #272727;
+  height: 100vh;
+  color: #fff;
+}
+/* absolute是相對於最近的非static父元素定位的
+所以header要設定relative(若設定absolute會影響到下半部)
+guessNumber的bottom: 0; 才會生效
+
+border-box消除40vh+60vh以外另有8px的border
+*/
+header {
+  box-sizing: border-box;
+  height: 40vh;
+  width: 100%;
+  text-align: center;
+  border-bottom: #fff solid 0.8rem;
+  position: relative;
+}
+.btn {
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+}
+.again {
+  position: absolute;
+  left: 5%;
+  top: 4%;
+}
+.between {
+  font-size: 2.5rem;
+  position: absolute;
+  right: 8%;
+  top: 4%;
+}
+.title {
+  font-size: 4.5rem;
+  position: relative;
+  top: 35%;
+}
+.goal {
+  width: 8rem;
+  font-size: 4rem;
+  background-color: #fff;
+  color: #000;
+  padding: 2rem 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%); /* 偏移自身寬度,高度 50% */
+}
+main {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+}
+section {
+  width: 50%;
+  position: relative;
+}
+.guess {
+  width: 16rem;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, 0);
+  padding: 3rem 0;
+  border: #fff solid 0.3rem;
+  background-color: #272727;
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+}
+.check {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0);
+}
+.right p {
+  width: fit-content;
+  position: relative;
+  top: 25%;
+  left: 30%;
+  font-size: 3rem;
+  padding: 1.5rem 0;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: calc(62.5% / 1.5);
+  }
+  .right p {
+    left: 15%;
+  }
+  .check {
+    top: 45%;
+  }
+}
