@@ -64,24 +64,26 @@ section {
   width: 50%;
   position: relative;
 }
-.guess {
-  width: 16rem;
+.left-box {
   position: absolute;
   left: 50%;
-  top: 25%;
+  top: 30%;
   transform: translate(-50%, 0);
+}
+.guess {
+  display: block;
+  width: 16rem;
   padding: 3rem 0;
   border: #fff solid 0.3rem;
   background-color: #272727;
   color: #fff;
   font-size: 3rem;
   text-align: center;
+  margin-bottom: 3rem;
 }
 .check {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, 0);
+  display: block;
+  margin: auto;
 }
 .right p {
   width: fit-content;

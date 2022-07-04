@@ -10,24 +10,26 @@
   <body>
     <header>
       <button class="btn again">Play again!</button>
-      <p class="between">( between 1 to 99 )</p>
+      <p class="between">( Between 1 to 99 )</p>
       <h1 class="title">Guess the Number!</h1>
       <div class="goal">?</div>
     </header>
     <main>
       <section>
-        <input
-          type="number"
-          class="guess"
-          oninput="if(value > 99)value =
+        <div class="left-box">
+          <input
+            type="number"
+            class="guess"
+            oninput="if(value > 99)value =
         99;if(value < 1)value = 1"
-        />
-        <button class="btn check">Check!</button>
+          />
+          <button class="btn check">Check!</button>
+        </div>
       </section>
       <section class="right">
         <p class="hint">Start guessing...</p>
-        <p>times: <span class="times">0</span></p>
-        <p>best: <span class="best">0</span></p>
+        <p>Times: <span class="times">0</span></p>
+        <p>Best: <span class="best">0</span></p>
       </section>
     </main>
     <script src="script.js"></script>

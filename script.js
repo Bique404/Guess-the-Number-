@@ -20,29 +20,29 @@ document.querySelector('.check').addEventListener('click', function () {
     times++;
     document.querySelector('.times').textContent = times;
     guess = temp;
-  }
 
-  if (guess == random) {
-    displayMessage('Correct!');
-    document.querySelector('.goal').textContent = random;
-    document.querySelector('.goal').style.width = '14rem';
-    document.querySelector('body').style.backgroundColor = '#00A600';
-    document.querySelector('.hint').style.color = '#fff';
+    if (guess == random) {
+      displayMessage('Correct!');
+      document.querySelector('.goal').textContent = random;
+      document.querySelector('.goal').style.width = '14rem';
+      document.querySelector('body').style.backgroundColor = '#00A600';
+      document.querySelector('.hint').style.color = '#fff';
 
-    if (best == 0) {
-      best = times;
-      document.querySelector('.best').textContent = best;
+      if (best == 0) {
+        best = times;
+        document.querySelector('.best').textContent = best;
+      }
+      if (best > times) {
+        best = times;
+        document.querySelector('.best').textContent = best;
+      }
+    } else if (guess > random) {
+      displayMessage('Too high!');
+      document.querySelector('.hint').style.color = '#F75000';
+    } else if (guess < random) {
+      displayMessage('Too low!');
+      document.querySelector('.hint').style.color = '#F75000';
     }
-    if (best > times) {
-      best = times;
-      document.querySelector('.best').textContent = best;
-    }
-  } else if (guess > random) {
-    displayMessage('Too high!');
-    document.querySelector('.hint').style.color = '#F75000';
-  } else if (guess < random) {
-    displayMessage('Too low!');
-    document.querySelector('.hint').style.color = '#F75000';
   }
 });
 
